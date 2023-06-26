@@ -10,19 +10,19 @@ contract MyToken {
 
 
     // mapping variable here
-    mapping(address=>uint) public tokenHolders;
+    mapping(address=>uint) public balances;
 
 
     // mint function
     function mint(address _address, uint _value) public{
         totalSupply+=_value;
-        tokenHolders[_address] += _value;
+        balances[_address] += _value;
     }
 
 
     // burn function
     function burn(address _address, uint _value) public{
-        require(tokenHolders[_address] > _value, "Cannot burn more than balance tokens");
+        require(balances[_address] > _value, "Cannot burn more than balance tokens");
         totalSupply-=_value;
         tokenHolders[_address] -= _value;
     }
