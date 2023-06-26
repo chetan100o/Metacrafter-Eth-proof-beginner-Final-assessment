@@ -4,7 +4,7 @@ contract MyToken {
     // public variables here
     string public tokenName = "EffortPoint";
     string public tokenAbbvr = "EP";
-    uint public totalSupply = 10000;
+    uint public totalSupply = 0;
 
 
     // mapping variable here
